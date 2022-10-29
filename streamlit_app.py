@@ -1,6 +1,6 @@
 import streamlit
 
-streamlit.title("TEST")
+streamlit.title("Code from Python notebook in Git")
 
 streamlit.header("Sutirtha Ghosh")
 
