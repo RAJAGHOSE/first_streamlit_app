@@ -47,10 +47,11 @@ def get_fruit_list_from_db(my_cnx) :
   my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
   return my_cur.fetchall()
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_data_row = get_fruit_list_from_db(my_cnx);
-streamlit.text("Hello from Snowflake:")
-streamlit.dataframe(my_data_row)
+if streamlit.button('Get Fruit List'):
+  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+  my_data_row = get_fruit_list_from_db(my_cnx);
+  streamlit.text("Hello from Snowflake:")
+  streamlit.dataframe(my_data_row)
 
 streamlit.stop()
 
