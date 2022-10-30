@@ -55,7 +55,7 @@ if streamlit.button('Get Fruit List'):
 
 def inset_new_fruit(my_cnx,fruit_to_add):
   my_cur = my_cnx.cursor()
-  my_cur.execute("INSERT INTO fruit_load_list values ('FROM STREAMLIT')")
+  my_cur.execute("INSERT INTO fruit_load_list values ('"'+ fruit_to_add + '"')")
   return "Thanks for adding " + fruit_to_add
 
 fruit_to_add=streamlit.text_input("What fruit to add?")
