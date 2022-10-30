@@ -1,5 +1,5 @@
-#import streamlit
-#import pandas
+import streamlit
+import pandas
 #
 #
 #streamlit.header('Breakfast Menu')
