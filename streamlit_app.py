@@ -18,7 +18,7 @@ import requests
 #streamlit.dataframe(my_fruit_list.loc[fruits_selected])
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "kiwi")
 #streamlit.text(fruityvice_response.json())
 
 # write your own comment -what does the next line do? 
