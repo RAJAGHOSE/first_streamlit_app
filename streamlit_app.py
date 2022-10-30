@@ -42,7 +42,7 @@ try:
 except URLerror as e:
   streamlit.error()
   
-def get_fruit_list_from_db:
+def get_fruit_list_from_db(my_cnx) :
   my_cur = my_cnx.cursor()
   my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
   return my_cur.fetchall()
